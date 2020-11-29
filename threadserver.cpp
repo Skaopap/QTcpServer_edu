@@ -65,10 +65,11 @@ void ThreadServer::readyRead()
     sharedMapMutex->lock();
 
     // Register Pseudo
-    if(message.indexOf("P:") == 0 && message.indexOf("PubKey") != -1 )
+    if(message.indexOf("P:") == 0 && message.indexOf("PuBKeY") != -1 )
     {
-        int indexOfPK = message.lastIndexOf(" PubKey");
+        int indexOfPK = message.lastIndexOf(" PuBKeY");
         QString pseudo = message.mid(2).left(indexOfPK-2);
+        SocketPseudo = pseudo;
 
         if(!sharedMapClients->contains(pseudo) )
         {
@@ -86,7 +87,7 @@ void ThreadServer::readyRead()
 
     }
     // Asking for clients PubKey
-    else if(message.indexOf("ConnectTo") == 0)
+    else if(message.indexOf("CoNNeCTTo") == 0)
     {
         //qDebug() << sharedMapClients;
         QString pubkey;
@@ -101,8 +102,19 @@ void ThreadServer::readyRead()
         sharedMapMutex->unlock();
         SendTo(QString("APK")+pubkey,socket);
     }
+    // PubKey changed
+    /*else if(message.indexOf("PpUbChAnGeD:") == 0)
+    {
+        int indexOfPK = message.lastIndexOf(" PubKey");
+        QString pseudo = message.mid(12).left(indexOfPK-12);
+        if(pseudo == SocketPseudo)
+        {
+             (*sharedMapClients)[pseudo].second = message.mid(indexOfPK + 7);
+        }
+        sharedMapMutex->unlock();
+    }*/
     // Send crypted message
-    else if (message.indexOf("Pseudo:") == 0)
+    else if (message.indexOf("PsEUdO:") == 0)
     {
 
         int indexOfMSG = message.lastIndexOf(" MSG:");
@@ -120,7 +132,7 @@ void ThreadServer::readyRead()
         }
         else
         {
-            msg = "CRYPTED:" + message.mid(indexOfMSG + 5);
+            msg = "CrYpTEd:" + message.mid(indexOfMSG + 5);
             sharedMapMutex->unlock();
             SendTo(msg, (*sharedMapClients)[pseudo].first );
         }

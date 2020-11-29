@@ -29,7 +29,7 @@ Server::Server()
     else
     {
         // if success
-        ServerState->setText(tr("The server has started on the port : <strong>") + QString::number(serveur->serverPort()) + tr("</strong>.<br />Clients are know abled to connect."));
+        ServerState->setText(tr("The server has started on the port : <strong>") + QString::number(serveur->serverPort()) + tr("</strong>.<br />Clients can now log in."));
         connect(serveur, SIGNAL(newConnection()), this, SLOT(NewConnection()));
     }
 }

@@ -28,6 +28,7 @@ private slots:
 
 private:
     QTcpSocket *socket;
+    QString SocketPseudo;
 
     QMutex* sharedMapMutex;
     QMap<QString, std::pair<QTcpSocket *, QString>>* sharedMapClients; // Pseudo , <socket , pubkey>

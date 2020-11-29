@@ -15,6 +15,8 @@ class Server : public QWidget
         Server();
 
     private slots:
+
+        // Start a thread with each new connection
         void NewConnection();
 
     private:
@@ -22,7 +24,9 @@ class Server : public QWidget
         QPushButton *QuitButton;
         QTcpServer *serveur;
 
-        QMutex* mapMutex;
+        QMutex* mapMutex; // mutex to manage shared map
+
+        // Shared map between threads to have access to the public key and pseudo
         QMap<QString, std::pair<QTcpSocket *, QString>>* mapClients;
 };
 
