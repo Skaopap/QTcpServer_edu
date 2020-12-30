@@ -59,6 +59,7 @@ void ThreadServer::readyRead()
     QString message;
     in >> message;
 
+    emit SendMessageToDisplay(message);
     qDebug() << "Server msg recu : "<< message;
     //qDebug() << *sharedMapClients;
 

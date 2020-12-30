@@ -14,6 +14,9 @@ class Server : public QWidget
     public:
         Server();
 
+public slots:
+        void DisplayMessage(QString txt) { MessageRecieved->setText(txt);}
+
     private slots:
 
         /*!
@@ -23,6 +26,7 @@ class Server : public QWidget
 
     private:
         QLabel *ServerState; /*!< Pointer to the label displayed to show the server state */
+        QLabel *MessageRecieved;
         QPushButton *QuitButton; /*!< Pointer to the quit button t */
         QTcpServer *serveur; /*!< Pointer to the TCP Server */
 

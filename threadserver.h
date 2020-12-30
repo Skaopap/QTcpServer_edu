@@ -21,6 +21,13 @@ public:
     */
     void run() override;
 
+signals:
+
+    /*!
+     * \brief Send the recieving data to the server to display it
+    */
+    void SendMessageToDisplay(QString);
+
 public slots:
 
     /*!

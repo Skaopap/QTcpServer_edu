@@ -8,11 +8,13 @@ Server::Server()
 
     // create window
     ServerState = new QLabel;
+    MessageRecieved = new QLabel;
     QuitButton = new QPushButton(tr("Stop Server"));
     connect(QuitButton, SIGNAL(clicked()), qApp, SLOT(quit()));
 
     QVBoxLayout *layout = new QVBoxLayout;
     layout->addWidget(ServerState);
+    layout->addWidget(MessageRecieved);
     layout->addWidget(QuitButton);
     setLayout(layout);
 
@@ -44,6 +46,7 @@ void Server::NewConnection()
 
     // once a thread is not needed, it will be beleted later
     connect(threadServer, SIGNAL(finished()), threadServer, SLOT(deleteLater()));
+    connect(threadServer, SIGNAL(SendMessageToDisplay(QString)), this, SLOT(DisplayMessage(QString)));
 
     threadServer->start();
 }
