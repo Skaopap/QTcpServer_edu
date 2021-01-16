@@ -168,7 +168,7 @@ void ThreadServer::disconnected()
     sharedMapMutex->unlock();
 
     // send connection infos to all
-    SendToAll(tr("<em>Client deconnexion..</em> \n") + ClientsConnected() );
+    SendToAll(tr("DeCo:<em>Client deconnexion..</em> \n") + ClientsConnected() );
 
     socket->deleteLater();
 
