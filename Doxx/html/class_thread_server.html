@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
+<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -103,6 +104,12 @@ Public Slots</h2></td></tr>
 <tr class="memitem:af6b8227d4e738ec2dad7c4e08c861aae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_server.html#af6b8227d4e738ec2dad7c4e08c861aae">disconnected</a> ()</td></tr>
 <tr class="memdesc:af6b8227d4e738ec2dad7c4e08c861aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the client is disconnected.  <a href="class_thread_server.html#af6b8227d4e738ec2dad7c4e08c861aae">More...</a><br /></td></tr>
 <tr class="separator:af6b8227d4e738ec2dad7c4e08c861aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:af8ef25a10edb8fe5d14af99d8cec0eb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_server.html#af8ef25a10edb8fe5d14af99d8cec0eb7">SendMessageToDisplay</a> (QString)</td></tr>
+<tr class="memdesc:af8ef25a10edb8fe5d14af99d8cec0eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the recieving data to the server to display it.  <a href="class_thread_server.html#af8ef25a10edb8fe5d14af99d8cec0eb7">More...</a><br /></td></tr>
+<tr class="separator:af8ef25a10edb8fe5d14af99d8cec0eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -298,6 +305,34 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Override QThread function, run the thread. </p>
+
+</div>
+</div>
+<a id="af8ef25a10edb8fe5d14af99d8cec0eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ef25a10edb8fe5d14af99d8cec0eb7">&#9670;&nbsp;</a></span>SendMessageToDisplay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThreadServer::SendMessageToDisplay </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send the recieving data to the server to display it. </p>
 
 </div>
 </div>

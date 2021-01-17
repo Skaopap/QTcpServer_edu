@@ -62,6 +62,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -91,6 +92,11 @@ Collaboration diagram for Server:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a4056069e7c4dc9b5cae6148e2fb6a886"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#a4056069e7c4dc9b5cae6148e2fb6a886">DisplayMessage</a> (QString txt)</td></tr>
+<tr class="separator:a4056069e7c4dc9b5cae6148e2fb6a886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad5ec9462b520e59f7ea831e157ee5e59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#ad5ec9462b520e59f7ea831e157ee5e59">Server</a> ()</td></tr>
@@ -106,6 +112,8 @@ Private Slots</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ac9d57b36d1f9b6cb457a99bdacfa1728"><td class="memItemLeft" align="right" valign="top">QLabel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#ac9d57b36d1f9b6cb457a99bdacfa1728">ServerState</a></td></tr>
 <tr class="separator:ac9d57b36d1f9b6cb457a99bdacfa1728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7811d331006f09d71896a9ef16a6ade4"><td class="memItemLeft" align="right" valign="top">QLabel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#a7811d331006f09d71896a9ef16a6ade4">MessageRecieved</a></td></tr>
+<tr class="separator:a7811d331006f09d71896a9ef16a6ade4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9663dd1b58b43e39b8463ea01738120"><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#ac9663dd1b58b43e39b8463ea01738120">QuitButton</a></td></tr>
 <tr class="separator:ac9663dd1b58b43e39b8463ea01738120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab328e5a86ba815f028fa74dab0a1e71d"><td class="memItemLeft" align="right" valign="top">QTcpServer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server.html#ab328e5a86ba815f028fa74dab0a1e71d">serveur</a></td></tr>
@@ -134,6 +142,32 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4056069e7c4dc9b5cae6148e2fb6a886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4056069e7c4dc9b5cae6148e2fb6a886">&#9670;&nbsp;</a></span>DisplayMessage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::DisplayMessage </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a09031ec98c90e707eb7ed078b18e72e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09031ec98c90e707eb7ed078b18e72e1">&#9670;&nbsp;</a></span>NewConnection</h2>
 
@@ -205,6 +239,28 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>mutex to manage shared map </p>
+
+</div>
+</div>
+<a id="a7811d331006f09d71896a9ef16a6ade4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7811d331006f09d71896a9ef16a6ade4">&#9670;&nbsp;</a></span>MessageRecieved</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QLabel* Server::MessageRecieved</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
